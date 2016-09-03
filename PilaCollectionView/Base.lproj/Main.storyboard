@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SQB-ud-RHm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stack View Controller-->
+        <scene sceneID="yX9-6v-LOm">
+            <objects>
+                <viewController id="SQB-ud-RHm" customClass="StackViewController" customModule="PilaCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMt-dk-dNz"/>
+                        <viewControllerLayoutGuide type="bottom" id="6u9-FW-nJz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Knk-p9-YYa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPO-QB-Msk">
+                                <rect key="frame" x="170" y="525" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4G2-7w-esl"/>
+                                    <constraint firstAttribute="width" constant="30" id="4QV-G2-vNq"/>
+                                </constraints>
+                                <state key="normal" image="Add"/>
+                                <connections>
+                                    <action selector="addElement:" destination="SQB-ud-RHm" eventType="touchUpInside" id="tNb-Ff-njn"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgZ-Pt-2y0">
+                                <rect key="frame" x="71" y="56" width="458" height="451"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="J7X-q0-Ext" customClass="StackLayout" customModule="PilaCollectionView" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Stack" id="XwF-Iy-k8S">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="SQB-ud-RHm" id="zMQ-37-fP6"/>
+                                    <outlet property="delegate" destination="SQB-ud-RHm" id="jfI-js-cAG"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-Ez-sdj">
+                                <rect key="frame" x="405" y="525" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nwK-Ks-KRB"/>
+                                    <constraint firstAttribute="width" constant="30" id="t5k-cN-ih4"/>
+                                </constraints>
+                                <state key="normal" image="Remove"/>
+                                <connections>
+                                    <action selector="removeElement:" destination="SQB-ud-RHm" eventType="touchUpInside" id="3Ov-Tg-cE9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xgZ-Pt-2y0" firstAttribute="leading" secondItem="Knk-p9-YYa" secondAttribute="leadingMargin" constant="51" id="3i5-Wn-y0m"/>
+                            <constraint firstItem="6u9-FW-nJz" firstAttribute="top" secondItem="8hn-Ez-sdj" secondAttribute="bottom" constant="45" id="6jy-qw-rc3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8hn-Ez-sdj" secondAttribute="trailing" constant="145" id="BsF-rJ-Kz5"/>
+                            <constraint firstItem="xgZ-Pt-2y0" firstAttribute="top" secondItem="SMt-dk-dNz" secondAttribute="bottom" constant="36" id="JB7-4o-SfT"/>
+                            <constraint firstItem="6u9-FW-nJz" firstAttribute="top" secondItem="NPO-QB-Msk" secondAttribute="bottom" constant="45" id="NsN-wF-Nwi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xgZ-Pt-2y0" secondAttribute="trailing" constant="51" id="X6v-yF-Fhd"/>
+                            <constraint firstItem="NPO-QB-Msk" firstAttribute="leading" secondItem="Knk-p9-YYa" secondAttribute="leadingMargin" constant="150" id="XTS-Mz-nRG"/>
+                            <constraint firstItem="6u9-FW-nJz" firstAttribute="top" secondItem="xgZ-Pt-2y0" secondAttribute="bottom" constant="93" id="y0V-1W-bUb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xgZ-Pt-2y0" id="oVu-8z-5qA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mj-cS-jU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="637"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add" width="626" height="626"/>
+        <image name="Remove" width="626" height="626"/>
+    </resources>
+</document>
