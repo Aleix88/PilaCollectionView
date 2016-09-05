@@ -23,13 +23,13 @@ class StackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         (collectionView.collectionViewLayout as! StackLayout).delegate = self
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         setContainerPoints()
         containerView = ContainerView(initialPosition:initialPositon, width: width, height: height)
         self.view.addSubview(containerView)
+
     }
     
     func setContainerPoints() {
@@ -39,9 +39,9 @@ class StackViewController: UIViewController {
     }
 
     @IBAction func addElement(sender: UIButton) {
-        addCell = true
-        numberOfElements += 1
-        collectionView.insertItemsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)])
+            addCell = true
+            numberOfElements += 1
+            collectionView.insertItemsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)])
     }
     
     @IBAction func removeElement(sender: UIButton) {

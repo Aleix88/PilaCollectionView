@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		191301701D7AD45700FB6FB2 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1913016F1D7AD45700FB6FB2 /* ContainerView.swift */; };
+		194DA19A1D7C116900B03AF3 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194DA1991D7C116900B03AF3 /* StackViewController.swift */; };
+		19EADA191D7DD34900095779 /* ContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EADA181D7DD34900095779 /* ContainerLayer.swift */; };
 		19EB449B1D72EEE900E1E793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB449A1D72EEE900E1E793 /* AppDelegate.swift */; };
 		19EB44A01D72EEE900E1E793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EB449E1D72EEE900E1E793 /* Main.storyboard */; };
 		19EB44A21D72EEE900E1E793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EB44A11D72EEE900E1E793 /* Assets.xcassets */; };
 		19EB44A51D72EEE900E1E793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EB44A31D72EEE900E1E793 /* LaunchScreen.storyboard */; };
 		19EB44B01D72EEE900E1E793 /* PilaCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB44AF1D72EEE900E1E793 /* PilaCollectionViewTests.swift */; };
-		19EB44BB1D72EF9000E1E793 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB44BA1D72EF9000E1E793 /* StackViewController.swift */; };
 		19EB44BD1D72F1B100E1E793 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EB44BC1D72F1B100E1E793 /* StackLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		1913016F1D7AD45700FB6FB2 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		194DA1991D7C116900B03AF3 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		19EADA181D7DD34900095779 /* ContainerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerLayer.swift; sourceTree = "<group>"; };
 		19EB44971D72EEE900E1E793 /* PilaCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilaCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EB449A1D72EEE900E1E793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19EB449F1D72EEE900E1E793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		19EB44AB1D72EEE900E1E793 /* PilaCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilaCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EB44AF1D72EEE900E1E793 /* PilaCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilaCollectionViewTests.swift; sourceTree = "<group>"; };
 		19EB44B11D72EEE900E1E793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19EB44BA1D72EF9000E1E793 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackViewController.swift; path = ../StackViewController.swift; sourceTree = "<group>"; };
 		19EB44BC1D72F1B100E1E793 /* StackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,9 +83,10 @@
 		19EB44991D72EEE900E1E793 /* PilaCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				19EB44BA1D72EF9000E1E793 /* StackViewController.swift */,
+				194DA1991D7C116900B03AF3 /* StackViewController.swift */,
 				1913016F1D7AD45700FB6FB2 /* ContainerView.swift */,
 				19EB44BC1D72F1B100E1E793 /* StackLayout.swift */,
+				19EADA181D7DD34900095779 /* ContainerLayer.swift */,
 				19EB449A1D72EEE900E1E793 /* AppDelegate.swift */,
 				19EB449E1D72EEE900E1E793 /* Main.storyboard */,
 				19EB44A11D72EEE900E1E793 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				TargetAttributes = {
 					19EB44961D72EEE900E1E793 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 647QKX74C8;
 					};
 					19EB44AA1D72EEE900E1E793 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -205,8 +209,9 @@
 			files = (
 				191301701D7AD45700FB6FB2 /* ContainerView.swift in Sources */,
 				19EB44BD1D72F1B100E1E793 /* StackLayout.swift in Sources */,
+				194DA19A1D7C116900B03AF3 /* StackViewController.swift in Sources */,
+				19EADA191D7DD34900095779 /* ContainerLayer.swift in Sources */,
 				19EB449B1D72EEE900E1E793 /* AppDelegate.swift in Sources */,
-				19EB44BB1D72EF9000E1E793 /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +342,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PilaCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AleixDiaz.PilaCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -349,11 +357,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PilaCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AleixDiaz.PilaCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -16,24 +16,28 @@ class ContainerView: UIView {
     var fourthPoint:CGPoint!
     var initialPositon:CGPoint!
     
+    var containerLayer:ContainerLayer!
+    
     var beizerPath = UIBezierPath()
     
     init(initialPosition: CGPoint, width: CGFloat, height: CGFloat){
         super.init(frame: CGRect(x: initialPosition.x, y: initialPosition.y, width: width, height: height))
         self.backgroundColor = UIColor.clearColor()
+        createPath()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func drawRect(rect: CGRect) {
+    
+    func createPath() {
         createPoints()
         beizerPath.moveToPoint(firstPoint)
         beizerPath.addLineToPoint(secondPoint)
         beizerPath.addLineToPoint(thirdPoint)
         beizerPath.addLineToPoint(fourthPoint)
-        beizerPath.lineWidth = 3
-        beizerPath.stroke()
+        containerLayer = ContainerLayer(path: beizerPath.CGPath)
+        self.layer.addSublayer(containerLayer)
     }
     
     func createPoints() {
